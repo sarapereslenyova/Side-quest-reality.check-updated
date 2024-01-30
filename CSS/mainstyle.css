@@ -1,0 +1,335 @@
+/* added my own fonts and colours*/
+
+:root {
+	--ff-mono: 'Major Mono Display', monospace;
+	--ff-serif: 'Cinzel Decorative', serif;
+	
+	--fw-standard: 400;
+	--fw-bold: 700;
+	--fw-black: 900;
+
+	--fs-400: 1rem;
+	--fs-700: 1.25rem;
+	--fs-900: 1.5rem;
+
+	--clr-text-neutral: #F0E8DC;
+	--clr-text-emphasis: #49423A;
+	--clr-numbers: #F0E8DC;
+
+	--clr-dark-green: #49423A;
+	--clr-light-green: #6E6B5F;
+	--clr-dark-purple: #25181E;
+	--clr-light-orange: #9F6F4C;
+	--clr-dark-orange: #614434;
+	--clr-light-blue: #8CA5A9;
+	--clr-dark-blue: #586F80;
+}
+
+/* All the basic stuff*/
+
+html {
+	font-family: var(--ff-serif);
+	font-weight: var(--fw-standard);
+	line-height: 1.7;
+	color: var(--clr-neutral);
+}
+
+body {
+	background-color: var(--clr-light-blue);
+	margin: 0;
+}
+
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto; /*make it hidden later*/
+}
+
+nav {
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	max-height: fit-content;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: var(--clr-dark-orange);
+	padding-left:1.1vw;
+	padding-right:1.1vw;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	max-width: 1000px;
+	margin-inline: auto;
+	border-radius: 14;
+	display: flex;
+	justify-content: center;
+}
+
+header,
+
+h1 {
+	font-weight: var(--fw-black);
+	font-size: var(--fs-900);
+	text-align: center;
+	line-height: 1;
+	color: var(--clr-numbers);
+}
+
+h2{
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-900);
+	color: var(--clr-numbers);
+}
+
+h3{
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-700);
+
+}
+
+p {
+	top: 50px;
+	text-align: center;
+	margin: 10px auto;
+	line-height: 1;
+	font-size: var(--fs-400);
+	color: var(--clr-dark-purple);
+}
+
+a{
+	font-family: var(--ff-serif);
+	font-size: var(--fs-400);
+	color: var(--clr-dark-purple);
+}
+
+
+/*Left side of the screen*/
+
+#purse-background{
+	background-color: var(--clr-dark-purple);
+	border-radius: 30px;
+	margin: 5px;
+	margin-top: 15px;
+	padding: 10px;
+	box-shadow: 0 0 0 15px var(--clr-dark-orange);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.left-column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 20px;
+}
+
+.card{
+	background-color: var(--clr-dark-green);
+	border-radius: 15px 15px 0 0;
+	padding: 10px;
+	margin: 20px;
+	width: 300px;
+	position:relative;
+	border-bottom: 2px solid #000000;
+	flex-shrink: 0;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.card.card:hover{
+	background-color: var(--clr-light-green);
+	transform: translateY(-20px);
+	padding-bottom: 35px;
+	row-gap: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	z-index: 2;
+	position: sticky;
+}
+
+.card.card:active{
+	background-color: var(--clr-light-green);
+	transform: translateY(-20px);
+	padding-bottom: 35px;
+	z-index: 998;
+	position: sticky;
+}
+
+#bigCard{
+	background-color: var(--clr-dark-blue);
+	padding: 15px;
+	border-radius: 14px;
+	outline-offset: 3px;
+	outline-color: black 2px;
+	margin: 0px;
+	margin-top: 40px;
+	max-width: 350px;
+}
+
+.expensesGridTop{
+	row-gap: 2px;
+	column-gap: 2px;
+}
+
+.ballanceGridBottom {
+	margin: 0 auto;
+	align-items: center;
+}
+
+/*Right side of the screen*/
+
+.right-column {
+	margin-top: 5rem;
+	display: flex;
+	gap: 0px;
+	flex-direction: column;
+	align-items:flex-start;
+	background-color: var(--clr-light-green);
+	border-radius: 14px;
+	padding: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.top-right-images{
+	display: flex;
+	flex-direction: row;
+}
+
+.bottom-rigth-calculations{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+/*Labels, input fields, buttons and other tiny tweaks*/
+
+label {
+	font-size: var(--fs-900);
+	font-weight: var(--fw-900);
+	padding-right: 20px;
+	align-items: center;
+	text-align: center;
+}
+
+input[type=number]{
+	width: 7em;
+	box-sizing: border-box;
+	transition: width 0.4s ease-in-out;
+	font-family: var(--ff-mono);
+}
+
+input[type=number]:focus{
+	width: 7.5em;
+	outline-color: #000000;
+	outline: auto;
+}
+
+button {
+	padding: 5px 10px;
+	background-color: var(--clr-dark-orange);
+	outline: invert;
+	outline-color: var(--clr-dark-orange);
+	outline-width: 5px;
+	position: relative;
+	text-align: center;
+	display: inline-block;
+	border: outset;
+	border-radius: 4px;
+	border-color: var(--clr-dark-orange);
+	font-family: var(--ff-serif);
+	font-weight: var(--fs-900);
+	font-size: var(--fs-700);
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--clr-light-orange);
+	outline-color: var(--clr-dark-orange);
+	outline: auto;
+}
+
+button:active{
+	transform: 1s var(--clr-dark-blue);
+}
+
+button:disabled {
+	opacity: 0.75;
+	pointer-events: none;
+}
+
+/*Images*/
+
+.images{
+	pointer-events:all;
+	cursor:pointer;
+	height: 15vw;
+	width: auto;
+	transition: transform 0.5s ease-in-out;
+}
+
+.images:hover{
+	border-image-outset: 5px;
+	border-image: 20px var(--fw-black);
+	border-image: 30px pink;
+	transform: scale(1.1);
+	z-index: 998;
+}
+.images:active{
+	border-image-outset: 5px;
+	border-image: 20px var(--fw-black);
+	border-image: 30px pink;
+	transform: scale(1.1);
+	z-index: 998;
+}
+
+/*Media queries - making it scalable*/
+
+@media (max-width: 1000px){
+	main{
+		display: flex;
+		justify-content: center;
+	}
+
+	html,body{
+		overflow: auto;
+	}
+
+	:root{
+		--fs-400: 0.75rem;
+		--fs-700: 0.9rem;
+		--fs-900: 1rem;
+	}	
+
+	#images{
+		height: 150%;
+		width: auto;
+	}
+	#purse-background {
+		max-width: 380px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+
+/*contact.html*/
+
+#myInformation {
+	text-align: center;
+	padding-top: 20%;
+}

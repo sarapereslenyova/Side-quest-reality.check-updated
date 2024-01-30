@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>reality.check</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="CSS/mainstyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<nav>
+			<ul>
+				<li><a href="index.html"><h1>reality.check</h1></a></li>
+			  	<li><a href="contact.html">More about the creator</a></li>
+			</ul>
+		  </nav>
+		  <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=
+		Major+Mono+Display&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	<header>
+		<div class="introduction">
+			<p>Come traveler, use your coin to restore Purseville to its former glory!</p>
+		</div>
+	</header>
+
+	<main>
+		<div id="purse-background">
+			<div class="left-column">
+				<div class="expensesGridTop">
+					<h1>Current list of expenses</h1>
+					<div class="card">
+						<p id="rentAmount">Rent 
+							<input type="number" id="userInputRent">
+							<button id="changeRentButton">Set</button>
+						</p>
+					</div>
+					<div class="card">
+						<p id="grocerAmount">Groceries 
+							<input type="number" id="userInputGrocer">
+							<button id="changeGrocerButton">Set</button>
+						</p>
+					</div>
+					<div class="card">
+						<p id="changeableExpenses">Changeable 
+							<input type="number" id="userInputChangeable">
+							<button id="changeOthereExpenses">Set</button>
+						</p>
+					</div>
+				</div>
+			
+					
+				<div class="ballanceGridBottom">
+					<div id="bigCard">
+						<label for="userInputBallance">Input your coin: </label>
+						<input type="number" id="userInputBallance">
+						<button onclick="setBallance()">Confirm</button>
+
+						<p id="ballanceDisplay">No ballance entered yet</p>
+						<p>Your fictional ballance is: <h1 id="fictionalBallance"></h1></p>
+					</div>
+				</div>
+			</div>
+
+				<div class="right-column">
+					<div class="top-right-images">
+						<div class="rent">
+							<p id="rentAmount"></p>
+							<img class="images" id="imageRent" src="images/castle realistic.png"><br>
+							<button id="payRentButton", onclick="payRent()">Pay Rent</button>
+							<button id="cancelRentButton", onclick="cancelRent()">Cancel</button>
+						</div>
+
+						<div class="grocer">
+							<p id="grocerAmount"></p>
+							<img class="images" id="imageGrocer" src="images/castle 1.png"><br>
+							<button id="payGrocer", onclick="payGrocer()">Pay Groceries</button>
+							<button id="cancelGrocer", onclick="cancelGrocer()">Cancel</button>
+						</div>
+					</div>
+					<div class="bottom-right-calculations">
+						<p>Ballance at the end of the month <button id="checkEndOfMonthBallance">Check</button></p>
+						<p>Some other future feature <button id="checkSthBallance">Check</button></p>
+					</div>
+				</div>
+		</div>
+	</main>
+
+		<script src="JS/main.js"></script>
+	</body>
+	<footer>
+		
+	</footer>
+</html>
